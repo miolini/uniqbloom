@@ -1,29 +1,28 @@
 package main
 
 import (
-	"io"
-	"os"
 	"bufio"
 	"flag"
 	"fmt"
 	"github.com/willf/bloom"
+	"io"
+	"os"
 )
 
 const (
-	NewLine = '\n'
+	newLine = '\n'
 )
 
 var (
 	flBloomN = flag.Uint("n", 1e6, "bloom filter n arg")
 	flBloomE = flag.Float64("e", 1e-5, "bloom filter error factor")
-	flQuiet = flag.Bool("q", true, "quiet mode")
+	flQuiet  = flag.Bool("q", true, "quiet mode")
 )
-
 
 func main() {
 	var (
 		line []byte
-		err error
+		err  error
 	)
 	if !(*flQuiet) {
 		fmt.Fprintf(os.Stderr, "Filter repeated lines by Artem Andreenko <mio@volmy.com>\n")
@@ -34,7 +33,7 @@ func main() {
 	writer := bufio.NewWriter(os.Stdout)
 	defer writer.Flush()
 	for {
-		line, err = reader.ReadBytes(NewLine)
+		line, err = reader.ReadBytes(newLine)
 		if err != nil {
 			if err == io.EOF {
 				break
