@@ -1,8 +1,8 @@
-= UniqBloom
+# UniqBloom
 
 Filter repeated lines based on [Bloom filter](https://en.wikipedia.org/wiki/Bloom_filter).
 
-== Usage 
+## Usage 
 
 ```bash
 Usage of uniqbloom:
