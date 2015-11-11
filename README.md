@@ -1,4 +1,4 @@
-# UniqBloom
+# uniqbloom
 
 Filter repeated lines based on [Bloom filter](https://en.wikipedia.org/wiki/Bloom_filter).
 
