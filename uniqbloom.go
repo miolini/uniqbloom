@@ -4,9 +4,10 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
-	"github.com/willf/bloom"
 	"io"
 	"os"
+	
+	"github.com/willf/bloom"
 )
 
 const (
